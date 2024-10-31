@@ -93,3 +93,11 @@ function checkScore() {
     }
   });
 }
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+  gameboard.innerHTML = ""; // 게임판 초기화
+  createBoard(); // 새 보드 생성
+  go = "circle"; // 초기 순서 설정
+  info.textContent = "Circle 먼저 시작!"; // 초기 안내 메시지 설정
+});
